@@ -1,0 +1,4 @@
+﻿  BTree.c
+d:\编程\source code\二叉树链式结构的实现\二叉树链式结构的实现\btree.c(66): warning C4013: “QueuePop”未定义；假设外部返回 int
+  二叉树链式结构的实现.vcxproj -> D:\编程\source code\二叉树链式结构的实现\Debug\二叉树链式结构的实现.exe
+  二叉树链式结构的实现.vcxproj -> D:\编程\source code\二叉树链式结构的实现\Debug\二叉树链式结构的实现.pdb (Partial PDB)
