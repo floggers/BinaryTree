@@ -1,0 +1,4 @@
+﻿  main.c
+d:\编程\source code\堆的代码实现\堆的代码实现\main.c(14): warning C4013: “system”未定义；假设外部返回 int
+  堆的代码实现.vcxproj -> D:\编程\source code\堆的代码实现\Debug\堆的代码实现.exe
+  堆的代码实现.vcxproj -> D:\编程\source code\堆的代码实现\Debug\堆的代码实现.pdb (Partial PDB)
