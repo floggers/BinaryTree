@@ -1,0 +1,4 @@
+﻿  main.cpp
+d:\编程\source code\0918-test\0918-test\main.cpp(85): warning C4715: “Vector<int>::operator[]”: 不是所有的控件路径都返回值
+  0918-test.vcxproj -> D:\编程\source code\0918-test\Debug\0918-test.exe
+  0918-test.vcxproj -> D:\编程\source code\0918-test\Debug\0918-test.pdb (Partial PDB)
