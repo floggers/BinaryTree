@@ -4,13 +4,13 @@ using namespace std;
 #if 0
 void select_sort(int* src, int size) {
 	for (int i = 0;i < size - 1;i++) {
-		int Min = i;                      
+		int Min = i;
 		for (int j = i + 1;j < size;j++) {
-			if (src[Min] > src[j]) {  
-				Min = j;              
+			if (src[Min] > src[j]) {
+				Min = j;
 			}
 		}
-		if (Min != i) {                  
+		if (Min != i) {
 			int tmp = src[Min];
 			src[Min] = src[i];
 			src[i] = tmp;
@@ -18,13 +18,10 @@ void select_sort(int* src, int size) {
 	}
 }
 
-int Average_max(int* src, int size) {
+long Average_max(int* src, int size) {
 	select_sort(src, size);
 	long average_max = 0;
-	if (size < 3) {
-		return 0;
-	}
-	else if (size % 3 != 0) {
+	if (size % 3 != 0) {
 		return 0;
 	}
 	else {
@@ -89,5 +86,31 @@ int main() {
 #endif
 
 #if 1
+#include <iostream>
+#include <string>
+using namespace std;
 
+int main() {
+	string str1("They are students");
+	string str2("aeiou");
+	string str3;
+	bool sign = true;
+	string::iterator it1 = str1.begin();
+	string::iterator it2;
+	for (it1;it1 != str1.end();it1++) {
+		for (it2=str2.begin();it2 != str2.end();it2++) {
+			if (*it1 == *it2) {
+				sign = false;
+				break;
+			}
+		}
+		if (sign==true){
+			str3.push_back(*it1);
+		}
+		sign = true;
+	}
+	cout << str3.c_str() << endl;
+		system("pause");
+		return 0;
+}
 #endif
