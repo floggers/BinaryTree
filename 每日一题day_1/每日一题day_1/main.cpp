@@ -91,14 +91,29 @@ int main() {
 using namespace std;
 
 int main() {
-	string str1("They are students");
-	string str2("aeiou");
+	string str1;
+	string str2;
 	string str3;
+	char n=0,m=0;
+	while (1) {
+		n = getchar();
+		if (n == '\n') {
+			break;
+		}
+		str1.push_back(n);
+	}
+	while (1) {
+		m = getchar();
+		if (m == '\n') {
+			break;
+		}
+		str2.push_back(m);
+	}
 	bool sign = true;
 	string::iterator it1 = str1.begin();
 	string::iterator it2;
-	for (it1;it1 != str1.end();it1++) {
-		for (it2=str2.begin();it2 != str2.end();it2++) {
+	for (it1;it1 != str1.end();++it1) {
+		for (it2=str2.begin();it2 != str2.end();++it2) {
 			if (*it1 == *it2) {
 				sign = false;
 				break;
