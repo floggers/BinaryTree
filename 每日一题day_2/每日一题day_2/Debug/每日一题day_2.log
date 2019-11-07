@@ -1,3 +1,6 @@
 ﻿  main.cpp
+d:\编程\source code\daily-code\每日一题day_2\每日一题day_2\main.cpp(60): warning C4018: “<”: 有符号/无符号不匹配
+d:\编程\source code\daily-code\每日一题day_2\每日一题day_2\main.cpp(62): warning C4018: “<”: 有符号/无符号不匹配
+d:\编程\source code\daily-code\每日一题day_2\每日一题day_2\main.cpp(69): warning C4018: “<”: 有符号/无符号不匹配
   每日一题day_2.vcxproj -> D:\编程\source code\Daily-code\每日一题day_2\Debug\每日一题day_2.exe
   每日一题day_2.vcxproj -> D:\编程\source code\Daily-code\每日一题day_2\Debug\每日一题day_2.pdb (Partial PDB)

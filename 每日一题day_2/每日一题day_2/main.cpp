@@ -1,7 +1,10 @@
 #include <iostream>
 #include <cstdio>
+#include <cstring>
+#include <vector>
 using namespace std;
 
+#if 0
 void reverse_str(char* begin,char* end) {
 	while (begin < end) {
 		char tmp = *begin;
@@ -47,3 +50,27 @@ int main() {
 	system("pause");
 	return 0;
 }
+#endif
+
+#if 1
+
+int count(vector<int> &v) {
+	int ret = 0;
+
+	return ret;
+}
+int main() {
+	int n;       
+	vector<int> v;
+	cin >> n;         //n个正整数
+	v.resize(n);
+
+	for (int i = 0;i < n;i++) {
+		cin >> v[i];
+	}
+	cout << count(v);
+	system("pause");
+	return 0;
+}
+
+#endif
