@@ -4,7 +4,7 @@
 #include <vector>
 using namespace std;
 
-#if 0
+#if 1
 void reverse_str(char* begin,char* end) {
 	while (begin < end) {
 		char tmp = *begin;
@@ -16,7 +16,8 @@ void reverse_str(char* begin,char* end) {
 	
 }
 
-void reverse_word(char* src) {
+void reverse_change(char* src) {
+	reverse_str(src, src + strlen(src) - 1);
 	char* begin = src;
 	char* end = src;
 	while (*src) {
@@ -44,15 +45,14 @@ int main() {
 		}
 		i++;
 	}
-	reverse_str(str, str + strlen(str) - 1);
-	reverse_word(str);
+	reverse_change(str);
 	cout << str << endl;
 	system("pause");
 	return 0;
 }
 #endif
 
-#if 1
+#if 0
 
 int count(vector<int> &v) {
 	int ret = 0;
