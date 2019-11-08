@@ -68,40 +68,53 @@ public:
 	//}
 
 	int MoreThanHalfNum_Solution(vector<int> numbers) {
-		if (numbers.size()==0) {
-			return 0;
+		//	if (numbers.size()==0) {
+		//		return 0;
+		//	}
+		//	else {
+		//		//select_sort(numbers);
+		//		sort(numbers.begin(), numbers.end());
+		//		int buf = numbers[0];
+		//		int times = 0;
+		//		int _times = 0;
+		//		int tmp = 0;
+		//		for (int i = 0;i < numbers.size() ;i++) {
+		//			if (numbers[i + 1] == buf) {
+		//				times++;
+		//				tmp = times;
+		//			}
+		//			else {
+		//				buf = numbers[i + 1];
+		//				_times++;
+		//				tmp = times > tmp ? times : tmp;
+		//				times = 0;
+		//			}
+		//			if (_times >= times) {
+		//				times = _times;
+		//				_times = 0;
+		//			}
+		//		}
+		//		if (tmp>(numbers.size() / 2)) {
+		//			return numbers[numbers.size()/2];
+		//		}
+		//		else
+		//		{
+		//			return 0;
+		//		}
+		//	}
+		//}
+		sort(numbers.begin(), numbers.end());
+		int count = 0;
+		int key = numbers[numbers.size() / 2];
+		for (int i = 0;i < numbers.size();i++) {
+			if (key == numbers[i]) {
+				count++;
+			}
 		}
-		else {
-			//select_sort(numbers);
-			sort(numbers.begin(), numbers.end());
-			int buf = numbers[0];
-			int times = 0;
-			int _times = 0;
-			int tmp = 0;
-			for (int i = 0;i < numbers.size() - 1;i++) {
-				if (numbers[i + 1] == buf) {
-					times++;
-					tmp = times;
-				}
-				else {
-					buf = numbers[i + 1];
-					_times++;
-					tmp = times > tmp ? times : tmp;
-					times = 0;
-				}
-				if (_times >= times) {
-					times = _times;
-					_times = 0;
-				}
-			}
-			if (tmp>(numbers.size() / 2)) {
-				return numbers[numbers.size()/2];
-			}
-			else
-			{
-				return 0;
-			}
+		if (count > (numbers.size() / 2)) {
+			return key;
 		}
+		return 0;
 	}
 };
 

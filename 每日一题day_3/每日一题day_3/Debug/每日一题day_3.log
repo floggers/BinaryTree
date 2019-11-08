@@ -1,5 +1,5 @@
 ﻿  test.cpp
-d:\编程\source code\daily-code\每日一题day_3\每日一题day_3\test.cpp(81): warning C4018: “<”: 有符号/无符号不匹配
-d:\编程\source code\daily-code\每日一题day_3\每日一题day_3\test.cpp(97): warning C4018: “>”: 有符号/无符号不匹配
+d:\编程\source code\daily-code\每日一题day_3\每日一题day_3\test.cpp(109): warning C4018: “<”: 有符号/无符号不匹配
+d:\编程\source code\daily-code\每日一题day_3\每日一题day_3\test.cpp(114): warning C4018: “>”: 有符号/无符号不匹配
   每日一题day_3.vcxproj -> D:\编程\source code\Daily-code\每日一题day_3\Debug\每日一题day_3.exe
   每日一题day_3.vcxproj -> D:\编程\source code\Daily-code\每日一题day_3\Debug\每日一题day_3.pdb (Partial PDB)
