@@ -51,34 +51,56 @@ int main() {
 
 class Solution {
 public:
+	//void select_sort(vector<int> &v) {
+	//	for (int i = 0;i < v.size() - 1;i++) {
+	//		int Max = i;                       //刚开始时将i的值赋给了Max
+	//		for (int j = i + 1;j < v.size();j++) {
+	//			if (v[Max] > v[j]) {   //如果比较出来了下标为j的元素的值大于下标为Max的元素的值
+	//				Max = j;               //就将j赋值给Max
+	//			}
+	//		}
+	//		if (Max != i) {    //如果Max不等于i则说明第i大的数字不在第i大的位置上 所以要交换
+	//			int tmp = v[Max];
+	//			v[Max] = v[i];
+	//			v[i] = tmp;
+	//		}
+	//	}
+	//}
+
 	int MoreThanHalfNum_Solution(vector<int> numbers) {
-		if (!numbers.size()) {
+		if (numbers.size()==0) {
 			return 0;
 		}
-		sort(numbers.begin(), numbers.end() - 1);
-		int buf = numbers[0];
-		int times = 1;
-		int _times = 0;
-		for (int i = 0;i < numbers.size() - 1;i++) {
-			if (numbers[i + 1] != buf) {
-				_times = 0;
-				_times++;
-				buf = numbers[i + 1];
-			}
-				if (numbers[i + 1] == buf){
+		else {
+			//select_sort(numbers);
+			sort(numbers.begin(), numbers.end());
+			int buf = numbers[0];
+			int times = 0;
+			int _times = 0;
+			int tmp = 0;
+			for (int i = 0;i < numbers.size() - 1;i++) {
+				if (numbers[i + 1] == buf) {
+					times++;
+					tmp = times;
+				}
+				else {
+					buf = numbers[i + 1];
 					_times++;
+					tmp = times > tmp ? times : tmp;
+					times = 0;
 				}
 				if (_times >= times) {
-					buf = numbers[i + 1];
 					times = _times;
+					_times = 0;
 				}
 			}
-		if (times > numbers.size() / 2) {
-			return buf;
-		}
-		else
-		{
-			return 0;
+			if (tmp>(numbers.size() / 2)) {
+				return numbers[numbers.size()/2];
+			}
+			else
+			{
+				return 0;
+			}
 		}
 	}
 };
