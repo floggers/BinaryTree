@@ -3,13 +3,8 @@
 using namespace std;
 
 string Change_Str(string &src) {
-	string str2;
-	str2.reserve(101);
+	string str2(src);
 	string::iterator its = src.begin();
-	string::iterator its2 = str2.begin();
-	for (its;its != src.end();++its) {
-		str2 += *its;
-	}
 	for (its;its != src.end();++its) {
 	int pos1=	str2.rfind(*its);
 		int pos2=str2.find(*its);
