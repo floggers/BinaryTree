@@ -10,10 +10,6 @@ string Change_Str(string &src) {
 	int pos2 = str2.find(*its);
 		if (pos1 != pos2) {
 			str2.erase(pos1, 1);
-			
-		}
-		else if(pos1==pos2){
-			continue;
 		}
 	}
 	return str2;
