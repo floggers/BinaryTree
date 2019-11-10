@@ -6,8 +6,8 @@ string Change_Str(string &src) {
 	string str2(src);
 	string::iterator its = src.begin();
 	for (its;its != src.end();++its) {
-	int pos1=	str2.rfind(*its);
-		int pos2=str2.find(*its);
+	int pos1 = str2.rfind(*its);
+	int pos2 = str2.find(*its);
 		if (pos1 != pos2) {
 			str2.erase(pos1, 1);
 			
