@@ -1,0 +1,5 @@
+﻿  test.cpp
+d:\编程\source code\daily-code\元素查找(二分查找变形)\元素查找(二分查找变形)\test.cpp(41): warning C4715: “bfind”: 不是所有的控件路径都返回值
+d:\编程\source code\daily-code\元素查找(二分查找变形)\元素查找(二分查找变形)\test.cpp(22): warning C4715: “findBreakPoint”: 不是所有的控件路径都返回值
+  元素查找(二分查找变形).vcxproj -> D:\编程\source code\Daily-code\元素查找(二分查找变形)\Debug\元素查找(二分查找变形).exe
+  元素查找(二分查找变形).vcxproj -> D:\编程\source code\Daily-code\元素查找(二分查找变形)\Debug\元素查找(二分查找变形).pdb (Partial PDB)
