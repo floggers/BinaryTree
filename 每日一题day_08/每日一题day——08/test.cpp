@@ -35,10 +35,9 @@ int main() {
 int which_Sort_case(vector<string> vs) {
 	int flag = 0;
 	vector<string> vs_buf(vs);      
-	vector<int> vi;
 	vector<int> vi_buf;
 	for (int i = 0;i < vs.size();i++) {
-		vi[i] = vs[i].size();
+		vi_buf.push_back(vs[i].size());
 	}
 	sort(vs_buf.begin(), vs_buf.end());       //×ÖµäÐòÅÅÐò
 	sort(vi_buf.begin(), vi_buf.end());      //³¤¶ÈÅÅÐò
@@ -60,7 +59,9 @@ int which_Sort_case(vector<string> vs) {
 				}
 			}
 			if (vs[i] == vs_buf[i] && vs[i].size() == vi_buf[i]) {
-				flag = 3;
+				if (flag != 2&&flag!=1) {
+					flag = 3;
+				}
 			}
 	}
 	return flag;
@@ -68,23 +69,25 @@ int which_Sort_case(vector<string> vs) {
 
 int main() {
 	int swh;
+	string s;
 	vector<string> vs;
 	int n;
 	cin >> n;
-	vs.resize(n);
-	for (int i = 0;i < n;i++) {
-		cin.get();
-		getline(cin, vs[i]);
+	while (cin >> s) {
+		vs.push_back(s);
+		n--;
+		if (n == 0) {
+			break;
+		}
 	}
 	swh = which_Sort_case(vs);
 	switch (swh)
 	{
-	case 1:cout << "lexicographically" << endl;
-	case 2:cout << "lengths" << endl;
-	case 3:cout << "both" << endl;
-	case 4:cout << "none" << endl;
-	default:cout << "ÊäÈë´íÎó£¡" << endl;
-		break;
+	case 1:cout << "lexicographically" << endl; break;
+	case 2:cout << "lengths" << endl;break;
+	case 3:cout << "both" << endl;break;
+	case 4:cout << "none" << endl;break;
+	default:cout << "ÊäÈë´íÎó£¡" << endl;break;
 	}
 	system("pause");
 	return 0;
