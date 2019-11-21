@@ -1,4 +1,5 @@
 #include <iostream>
+#include <vector>
 using namespace std;
 
 #if 0
@@ -73,9 +74,48 @@ int main()
 
 #if 1
 
+bool Lucky_or_not(vector<int> v) {
+	int num1 = 0;
+	int num2 = 0;
+	for (int i = 0;i < v.size();i++) {
+		num1 += v[i];
+		num2 *= v[i];
+	}
+	if(num1>num2){
+		return true;
+	}
+	else{
+		return false;
+	}
+}
+
+int Solutions_ways(vector<int> v) {
+	int ways = 0;
+	if (Lucky_or_not(v)) {
+		ways++;
+	}
+	else {
+		vector<int>::iterator it1 = v.begin();
+		vector<int>::iterator it2 = v.end() - 1;
+		for (it1 = v.begin();it1 != v.end();it1++) {
+			it1 = v.erase(it1);
+			if (Lucky_or_not(v)) {
+				ways++;
+			}
+		}
+	}
+}
 
 int main() {
-
+	int n;
+	cin >> n;
+	vector<int> vi;
+	int num;
+	while (cin >> num) {
+		vi.push_back(num);
+		if (cin.get() == '\n')
+			break;
+	}
 	system("pause");
 	return 0;
 }
