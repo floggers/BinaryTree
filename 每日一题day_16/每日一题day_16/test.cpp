@@ -1,7 +1,8 @@
 #include <iostream>
+#include <string>
 using namespace std;
 
-#if 1
+#if 0
 
 int count(int num) {
 	int count = 0;
@@ -24,6 +25,18 @@ int main() {
 	int num;
 	cin >> num;
 	cout << count(num)<<endl;
+	system("pause");
+	return 0;
+}
+
+#endif
+
+#if 1
+
+
+
+int main() {
+
 	system("pause");
 	return 0;
 }
