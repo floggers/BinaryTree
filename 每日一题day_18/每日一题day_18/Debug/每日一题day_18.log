@@ -1,0 +1,4 @@
+﻿  test.cpp
+d:\编程\source code\daily-code\每日一题day_18\每日一题day_18\test.cpp : warning C4335: 检测到 Mac 文件格式: 请将源文件转换为 DOS 格式或 UNIX 格式
+d:\编程\source code\daily-code\每日一题day_18\每日一题day_18\test.cpp(1): warning C4067: 预处理器指令后有意外标记 - 应输入换行符
+LINK : fatal error LNK1561: 必须定义入口点
