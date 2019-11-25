@@ -1,0 +1,4 @@
+﻿  test.cpp
+d:\编程\source code\daily-code\每日一题day_17\每日一题day_17\test.cpp(13): warning C4715: “getTotalcount”: 不是所有的控件路径都返回值
+  每日一题day_17.vcxproj -> D:\编程\source code\Daily-code\每日一题day_17\Debug\每日一题day_17.exe
+  每日一题day_17.vcxproj -> D:\编程\source code\Daily-code\每日一题day_17\Debug\每日一题day_17.pdb (Partial PDB)
