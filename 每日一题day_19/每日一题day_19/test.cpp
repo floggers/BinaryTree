@@ -2,7 +2,7 @@
 #include <string>
 using namespace std;
 
-#if 0
+#if 1
 
 int main() {
 	string str1,str2;
@@ -28,7 +28,7 @@ int main() {
 #endif
 
 
-#if 1
+#if 0
 
 int max_bottle(int n) {
 	int num = 0;
