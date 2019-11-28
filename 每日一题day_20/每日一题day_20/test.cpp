@@ -33,9 +33,55 @@ int main() {
 
 #endif
 
+#if 0
+
+string reverse_str(string s) {
+	string buf;
+	for (int i = s.size() - 1;i >= 0;i--) {
+		buf.push_back(s[i]);
+	}
+	s = buf;
+	return s;
+}
+
+int main() {
+	string str;
+	getline(cin, str);
+	str=reverse_str(str);
+	cout << str << endl;
+	system("pause");
+	return 0;
+}
+
+#endif
+
+#if 0
+
+int main() {
+	string s;
+	cin >> s;
+	int i = 0;
+	while (s[i] != '\0') {
+		i++;
+	}
+	while (i-- > 0) {
+		cout << s[i];
+	}
+	cout << endl;
+	system("pause");
+	return 0;
+}
+
+#endif
+
 #if 1
 
 
 
-int main()
+int main() {
+
+	system("pause");
+	return 0;
+}
+
 #endif
