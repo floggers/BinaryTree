@@ -1,3 +1,2 @@
 ﻿  test.cpp
-  每日一题_day22.vcxproj -> D:\编程\source code\Daily-code\每日一题_day22\Debug\每日一题_day22.exe
-  每日一题_day22.vcxproj -> D:\编程\source code\Daily-code\每日一题_day22\Debug\每日一题_day22.pdb (Partial PDB)
+LINK : fatal error LNK1168: 无法打开 D:\编程\source code\Daily-code\每日一题day_22\Debug\每日一题_day22.exe 进行写入
