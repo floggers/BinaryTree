@@ -1,7 +1,7 @@
 #include <iostream>
 using namespace std;
 
-#if 1
+#if 0
 
 class Solution {
 public:
@@ -25,6 +25,28 @@ int main() {
 	int n;
 	cin >> n;
 	cout << A.jumpFloorII(n) << endl;
+	system("pause");
+	return 0;
+}
+
+#endif
+
+
+#if 1
+
+bool Cat_Bowl(double n, double r) {
+	return n < 2 * 3.14*r;
+}
+
+int main() {
+	double n, r;
+	cin >> n >> r;
+	if (Cat_Bowl(n, r)) {
+		cout << "Yes" << endl;
+	}
+	else {
+		cout << "No" << endl;
+	}
 	system("pause");
 	return 0;
 }
