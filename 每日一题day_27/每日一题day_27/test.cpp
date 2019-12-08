@@ -1,7 +1,7 @@
 #include <iostream>
 using namespace std;
 
-#if 0
+#if 1
 
 class Solution {
 public:
@@ -37,7 +37,7 @@ int main() {
 
 #endif
 
-#if 1
+#if 0
 
 int main() {
 	double a, b, c;
