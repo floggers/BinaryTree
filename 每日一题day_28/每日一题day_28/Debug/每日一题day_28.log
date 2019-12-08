@@ -1,0 +1,5 @@
+﻿  源.cpp
+d:\编程\source code\daily-code\每日一题day_28\每日一题day_28\源.cpp(11): warning C4244: “初始化”: 从“double”转换到“long”，可能丢失数据
+d:\编程\source code\daily-code\每日一题day_28\每日一题day_28\源.cpp(12): warning C4244: “初始化”: 从“double”转换到“long”，可能丢失数据
+  每日一题day_28.vcxproj -> D:\编程\source code\Daily-code\每日一题day_28\Debug\每日一题day_28.exe
+  每日一题day_28.vcxproj -> D:\编程\source code\Daily-code\每日一题day_28\Debug\每日一题day_28.pdb (Partial PDB)
