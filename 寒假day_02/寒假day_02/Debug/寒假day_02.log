@@ -1,0 +1,7 @@
+﻿  main.cpp
+d:\编程\source code\daily-code\寒假day_02\寒假day_02\main.cpp(10): warning C4018: “<”: 有符号/无符号不匹配
+d:\编程\source code\daily-code\寒假day_02\寒假day_02\main.cpp(21): warning C4018: “<”: 有符号/无符号不匹配
+d:\编程\source code\daily-code\寒假day_02\寒假day_02\main.cpp(25): warning C4018: “<”: 有符号/无符号不匹配
+d:\编程\source code\daily-code\寒假day_02\寒假day_02\main.cpp(35): warning C4715: “Solution::searchInsert”: 不是所有的控件路径都返回值
+  寒假day_02.vcxproj -> D:\编程\source code\Daily-code\寒假day_02\Debug\寒假day_02.exe
+  寒假day_02.vcxproj -> D:\编程\source code\Daily-code\寒假day_02\Debug\寒假day_02.pdb (Partial PDB)
