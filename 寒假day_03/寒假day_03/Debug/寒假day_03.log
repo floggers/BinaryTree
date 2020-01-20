@@ -1,0 +1,6 @@
+﻿  main.cpp
+d:\编程\source code\daily-code\寒假day_03\寒假day_03\main.cpp(11): warning C4018: “<”: 有符号/无符号不匹配
+d:\编程\source code\daily-code\寒假day_03\寒假day_03\main.cpp(14): warning C4018: “<”: 有符号/无符号不匹配
+d:\编程\source code\daily-code\寒假day_03\寒假day_03\main.cpp(48): warning C4018: “<”: 有符号/无符号不匹配
+  寒假day_03.vcxproj -> D:\编程\source code\Daily-code\寒假day_03\Debug\寒假day_03.exe
+  寒假day_03.vcxproj -> D:\编程\source code\Daily-code\寒假day_03\Debug\寒假day_03.pdb (Partial PDB)
