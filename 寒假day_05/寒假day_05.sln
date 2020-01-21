@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.26730.16
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "寒假day_05", "寒假day_05\寒假day_05.vcxproj", "{D3390629-E280-467B-891F-83B6817C3D6D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D3390629-E280-467B-891F-83B6817C3D6D}.Debug|x64.ActiveCfg = Debug|x64
+		{D3390629-E280-467B-891F-83B6817C3D6D}.Debug|x64.Build.0 = Debug|x64
+		{D3390629-E280-467B-891F-83B6817C3D6D}.Debug|x86.ActiveCfg = Debug|Win32
+		{D3390629-E280-467B-891F-83B6817C3D6D}.Debug|x86.Build.0 = Debug|Win32
+		{D3390629-E280-467B-891F-83B6817C3D6D}.Release|x64.ActiveCfg = Release|x64
+		{D3390629-E280-467B-891F-83B6817C3D6D}.Release|x64.Build.0 = Release|x64
+		{D3390629-E280-467B-891F-83B6817C3D6D}.Release|x86.ActiveCfg = Release|Win32
+		{D3390629-E280-467B-891F-83B6817C3D6D}.Release|x86.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {D80FE434-DC22-46C6-90FD-6801180E1B4C}
+	EndGlobalSection
+EndGlobal
