@@ -1,4 +1,6 @@
 #include <iostream>
+#include <vector>
+#include <algorithm>
 using namespace std;
 
 class Solution {
@@ -19,15 +21,25 @@ public:
 		return count;
 	}
 
-	int lengthOfLastWord2(string s) {
-	
+	void merge(vector<int>& nums1, int m, vector<int>& nums2, int n) {
+		nums1.resize(m + n);
+		for (int i = m, j = 0;i < m + n, j < n;i++, j++) {
+			nums1[i] = nums2[j];
+		}
+		sort(nums1.begin(), nums1.end());
 	}
+
 };
 
 int main() {
 	Solution A;
-	cout<<A.lengthOfLastWord("b   a    ");
-
+	//cout<<A.lengthOfLastWord("b   a    ");
+	vector<int>nums1(3, 0);
+	vector<int>nums2(2, 1);
+	A.merge(nums1, 3, nums2, 2);
+	for (auto i : nums1) {
+		cout << i << " ";
+	}
 	system("pause");
 	return 0;
 }
