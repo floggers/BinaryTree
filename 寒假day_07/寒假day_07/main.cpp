@@ -29,16 +29,44 @@ public:
 		return A;
 	}
 
+	int pivotIndex(vector<int>& nums) {
+		int left = 0;
+		int right = nums.size() - 1;
+		int tmp1 = nums[left];
+		int tmp2 = nums[right];
+		while (left + 1 < right) {
+			if (tmp1 < tmp2) {
+				tmp1 += nums[left + 1];
+				left++;
+			}
+			else if (tmp1 > tmp2) {
+				tmp2 += nums[right - 1];
+				right--;
+			}
+			else if (left + 1 == right - 1 && tmp1 == tmp2) {  
+					return left + 1;
+			}
+			else {
+				tmp1 += nums[left + 1];
+				tmp2 += nums[right - 1];
+				left++;
+				right--;
+			}
+		}
+		return -1;
+	}
+
 };
 
 int main() {
-	int arr[] = { 1,3,2,4 };
-	vector<int>test(arr, arr + 4);
+	int arr[] = { 1,2,3,4,5,10 };
+	vector<int>test(arr, arr + 6);
 	Solution A;
-	A.sortArrayByParity(test);
+	/*A.sortArrayByParity(test);
 	for (auto i : test) {
 		cout << i << " ";
-	}
+	}*/
+	cout << A.pivotIndex(test);
 	system("pause");
 	return 0;
 }
