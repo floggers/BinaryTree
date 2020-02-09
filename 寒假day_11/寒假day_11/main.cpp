@@ -56,12 +56,12 @@ public:
 			if (ret_map[chars[i]] > 1) {
 				string s = to_string(ret_map[chars[i]]);
 				if (chars.size() - (i + ret_map[chars[i]]) >= 0) {
-					chars[i] = chars[ret_map[i]-1];
+					chars[i] = chars[i+1];
 					for (int k = 0;k < s.size();k++,i++) {
-						chars.insert(chars.begin() + i + 1, s[k]);
+						chars[i + 1 ] = s[k];
 					}
 				}
-				i += s.size();
+				i++;
 			}
 			else {
 				chars[i] = chars[i + ret_map[chars[i]] - 1];
@@ -76,8 +76,8 @@ public:
 
 int main() {
 	string str("`l;`` 1o1 ??;l`");
-	char chr[7] = { 'a','a','b','b','c','c','c' };
-	vector<char> vecchr(chr, chr + 7);
+	char chr[8] = { 'a','a','a','b','b','a','a','a' };
+	vector<char> vecchr(chr, chr + 8);
 	Solution A;
 	//cout << A.isPalindrome(str);
 	cout << A.compress(vecchr);
