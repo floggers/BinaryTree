@@ -3,7 +3,7 @@
 #include <vector>
 using namespace std;
 
-#if 0
+#if 1
 string RmBfromA(string a, string b) {
 	string buf;
 	int lenb = b.size();
@@ -26,7 +26,8 @@ string RmBfromA(string a, string b) {
 int main() {
 	string str1;
 	string str2;
-	cin >> str1 >> str2;
+	getline(cin, str1);
+	getline(cin, str2);
 	cout << RmBfromA(str1, str2)<<endl;
 	system("pause");
 	return 0;
@@ -72,7 +73,7 @@ int main() {
 
 #endif
 
-#if 1
+#if 0
 //´íÎó´úÂë
 bool WaysTo24(vector<int> nums,int result,int pos) {
 	int flag = 0;
