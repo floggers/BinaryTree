@@ -1,14 +1,18 @@
 #include <iostream>
 #include <string>
 #include <vector>
+#include <queue>
 using namespace std;
 
 struct TreeNode {
 	int val;
 	TreeNode *left;
 	TreeNode *right;
-	TreeNode(int x) : val(x), left(NULL), right(NULL) {}
-	
+	TreeNode(int x) :
+		val(x), left(NULL), right(NULL)
+	{
+            
+           	}
 };
 
 class Solution {
@@ -33,7 +37,27 @@ public:
 	}
 
 	vector<int> rightSideView(TreeNode* root) {
-
+		vector<int> res;
+		if (!root) {
+			return res;
+		}
+		queue<TreeNode*> qT;
+		qT.push(root);
+		while (!qT.empty()) {
+			int size = qT.size();
+			res.push_back(qT.back()->val);
+			while (size--) {
+				TreeNode* tmp = qT.front();
+				qT.pop();
+				if (tmp->left) {
+					qT.push(tmp->left);
+				}
+				if (tmp->right) {
+					qT.push(tmp->right);
+				}
+			}
+		}
+		return res;
 	}
 
 };
