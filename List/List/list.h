@@ -15,4 +15,5 @@ struct SList {
 	void ListPushFront(SList<int> * plist, int x);
 	void ListPopFront(SList<int> * plist);
 	void ListPrint(SList<int> * plist);
-	void ListReverse(SList<int> * plist);
+	void ListReverse1(SList<int> * plist);      //后删头插法  翻转链表
+	void ListReverse2(ListNode<int> * plist);     //向后转法    翻转链表

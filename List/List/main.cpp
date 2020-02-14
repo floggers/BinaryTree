@@ -11,7 +11,8 @@ int main() {
 	ListPushFront(&test, 3);
 	ListPushFront(&test, 2);
 	ListPushFront(&test, 1);
-	ListReverse(&test);
+	ListReverse1(&test);
+	//ListReverse2(&test);
 	ListPrint(&test);
 	//ListPopFront(&test);
 	//ListPrint(&test);

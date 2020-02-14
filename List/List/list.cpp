@@ -16,7 +16,7 @@ void ListDestroy(SList<int> * plist) {
 }
 
 void ListPushFront(SList<int> * plist, int x) {            //头插
-	ListNode<int> * cur = new ListNode<int>();
+	ListNode<int> * cur = new ListNode<int>;
 	cur->_data = x;
 	cur->_next = plist->_head;
 	plist->_head = cur;
@@ -38,7 +38,7 @@ void ListPrint(SList<int> * plist) {
 	cout << "nullptr" << endl;
 }
 
-void ListReverse(SList<int> * plist) {
+void ListReverse1(SList<int> * plist) {                    //后删头插法
 	ListNode<int> * old_head = plist->_head;
 	ListNode<int> * tmp = plist->_head->_next;
 	while (tmp) {
@@ -46,5 +46,16 @@ void ListReverse(SList<int> * plist) {
 		tmp->_next = plist->_head;
 		plist->_head = tmp;
 		tmp = old_head->_next;
+	}
+}
+
+void ListReverse2(ListNode<int> * pHead) {                  //向后转法
+	ListNode<int> * cur = pHead;
+	ListNode<int> * pre = nullptr;
+	while (cur) {
+		ListNode<int> * tmp = cur->_next;
+		cur->_next = pre;
+		pre = cur;
+		cur = tmp;
 	}
 }

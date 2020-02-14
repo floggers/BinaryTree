@@ -1,5 +1,6 @@
 ﻿  main.cpp
-  list.cpp
   正在生成代码...
-  List.vcxproj -> D:\编程\source code\Daily-code\List\Debug\List.exe
-  List.vcxproj -> D:\编程\source code\Daily-code\List\Debug\List.pdb (Partial PDB)
+  正在编译...
+  list.cpp
+d:\编程\source code\daily-code\list\list\list.cpp : fatal error C1041: 无法打开程序数据库“D:\编程\source code\Daily-code\List\List\Debug\vc141.pdb”；如果要将多个 CL.EXE 写入同一个 .PDB 文件，请使用 /FS
+  正在生成代码...
