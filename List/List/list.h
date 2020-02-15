@@ -2,12 +2,12 @@
 template<class T>
 struct ListNode {
 		T _data;
-		ListNode<T> * _next;
+		struct ListNode<T> * _next;
 	};
 
 template<class T>
 struct SList {
-	ListNode<T> * _head;
+	struct ListNode<T> * _head;
 };
 
 	void ListInit(SList<int> * plist);
