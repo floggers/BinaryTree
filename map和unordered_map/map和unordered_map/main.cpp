@@ -8,7 +8,7 @@ int main() {
 	map<int, string> my_map = { {4,"张三"},{3,"李四"} };
 	my_map[5] = "王二麻子";          //使用[]进行单个插入，若已存在键值2，则赋值修改，若无则插入。
 	//my_map[4] = "王五";
-	my_map.insert(pair<int, string>(1, "陈二"));      //使用insert和pair插入
+	my_map.insert(pair<int, string>(1, "陈二"));      //使用insert和pair插入  若key存在,插入失败  不存在 插入成功
 	for (auto & e : my_map) {
 		cout << e.first << ' ' << e.second << endl;
 	}
