@@ -54,7 +54,30 @@ public:
 	}
 
 	void replaceSpace(char *str, int length) {
-	
+		int len = 0;
+		int i = 0;
+		int space = 0;
+		while (str[i]!='\0') {
+			if (str[i] == ' ') {
+				space++;
+			}
+			len++;
+			i++;
+		}
+		int newlen = len + 2 * space;
+		int p1 = len;
+		int p2 = newlen;
+		while (p1 <= p2 && p1 >= 0) {
+			if (str[p1] == ' ') {
+				str[p2--] = '0';
+				str[p2--] = '2';
+				str[p2--] = '%';
+			}
+			else {
+				str[p2--] = str[p1];
+			}
+			p1--;
+		}
 	}
 
 	vector<int> printListFromTailToHead(ListNode* head) {
@@ -102,9 +125,12 @@ int main() {
 	p4->next = new struct ListNode(5);
 	Solution A;
 	//cout << A.Find(8, array);
-	for (auto &i : A.printListFromTailToHead2(head)) {
+	/*for (auto &i : A.printListFromTailToHead2(head)) {
 		cout << i << " ";
-	}
+	}*/
+	char str[50] = " We are family!";
+	A.replaceSpace(str, sizeof(str));
+	cout << str;
 	system("pause");
 	return 0;
 }
