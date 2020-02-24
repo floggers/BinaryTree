@@ -31,17 +31,27 @@ void testBigIntAdd(){
 
 void testBigIntASub() {
 	BigInt A;
-	int a = 92354568;
-	int b = 92354562;
+	int a = 1001;
+	int b = 999;
 	cout << a - b << endl;
-	cout << A.Sub("92354568", "92354562") << endl;
+	cout << A.Sub("1001", "999") << endl;
 }
+
+void testBigIntMul() {
+	BigInt A;
+	int a = 10000;
+	int b = 10;
+	cout << a * b << endl;
+	cout << A.Mul("10000", "10") << endl;
+}
+
 
 int main() {
 	//test();
 	//tesrRSA();
 	//testBigIntAdd();
-	testBigIntASub();
+	//testBigIntASub();
+	testBigIntMul();
 	system("pause");
 	return 0;
 }
