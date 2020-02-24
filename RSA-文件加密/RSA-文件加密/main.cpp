@@ -32,9 +32,9 @@ void testBigIntAdd(){
 void testBigIntASub() {
 	BigInt A;
 	int a = 92354568;
-	int b = 90000000;
+	int b = 92354562;
 	cout << a - b << endl;
-	cout << A.Sub("92354568", "90000000") << endl;
+	cout << A.Sub("92354568", "92354562") << endl;
 }
 
 int main() {
