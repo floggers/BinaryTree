@@ -114,6 +114,8 @@
     <ClInclude Include="rsa.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="bigint.cpp" />
+    <ClCompile Include="bigint.h" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="rsa.cpp" />
   </ItemGroup>

@@ -26,5 +26,11 @@
     <ClCompile Include="rsa.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="bigint.h">
+      <Filter>头文件</Filter>
+    </ClCompile>
+    <ClCompile Include="bigint.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

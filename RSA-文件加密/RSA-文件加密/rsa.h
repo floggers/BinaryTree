@@ -26,6 +26,7 @@ public:
 	DataType getDkey(DataType ekey, DataType orla);
 	DataType Encrypt(DataType data, DataType ekey, DataType nkey);
 	DataType Decrypt(DataType data, DataType dkey, DataType nkey);
+
 	void getKeys();
 	Key getallKeys();
 };
