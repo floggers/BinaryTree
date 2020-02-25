@@ -33,13 +33,7 @@ string BigInt::Sub(string num1, string num2) {
 	int len1 = num1.size();
 	int len2 = num2.size();
 	int dif = len1 - len2;
-	if (dif < 0) {
-		dif = len2 - len1;
-		num1.insert(0, dif, '0');
-	}
-	else {
-		num2.insert(0, dif, '0');
-	}
+	num2.insert(0, dif, '0');
 	for (int i = num1.size() - 1;i >= 1;--i) {
 		num1[i] = (num1[i] - '0') - (num2[i] - '0');
 		if (num1[i] >= 0) {
@@ -63,7 +57,7 @@ string BigInt::Sub(string num1, string num2) {
 }
 
 
-string BigInt::Mul(string num1, string num2) {
+string BigInt::Mul(string num1, string num2) {                   //借助加法
 	if (!((num1[0] - '0')&&(num2[0]-'0'))) {
 		return "0";
 	}
@@ -92,4 +86,40 @@ string BigInt::Mul(string num1, string num2) {
 	return buf2;
 }
 
-pair<string, string> Dev(string num1, string num2);
+pair<string, string> BigInt::Dev(string num1, string num2) {                 //借助减法
+	int len1 = num1.size();
+	int len2 = num2.size();
+	int dif = len1 - len2;
+	num2.append(dif, '0');
+	string ret;                 //商
+	string rem;                //余数
+	char count = '0';
+	int newLen = num2.size();
+	while (newLen >= len2) {
+		while (CompareString_greater(num1,num2)||num1 == num2) {
+			num1 = Sub(num1, num2);
+			++count;
+		}
+			num2.erase(newLen - 1, 1);
+			--newLen;
+			ret += count;
+			count = '0';
+	}
+	while (ret[0] == '0') {
+		ret.erase(0, 1);
+	}
+	rem = num1;
+	return make_pair(ret, rem);
+}
+
+bool BigInt::CompareString_greater(string num1, string num2) {
+	if (num1.size() > num2.size()) {
+		return true;
+	}
+	else if (num1.size() < num2.size()) {
+		return false;
+	}
+	else {
+		return num1 > num2;
+	}
+}

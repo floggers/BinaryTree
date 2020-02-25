@@ -15,7 +15,7 @@ void test() {
 	cout << rsa.Decrypt(original, key._dkey, key._nkey) << endl;
 }
 
-void tesrRSA() {
+void testRSA() {
 	RSA rsa;
 	rsa.Encrypt("test.txt", "test.encrypt.txt");
 	rsa.Decrypt("test.encrypt.txt", "test.decrypt.txt");
@@ -45,13 +45,21 @@ void testBigIntMul() {
 	cout << A.Mul("10000", "10") << endl;
 }
 
+void testBigIntDev() {
+	BigInt A;
+	int a = 1235425543;
+	int b = 183344;
+	cout << a / b << "  " << a % b << endl;
+	cout << A.Dev("1235425543", "183344").first << "  " << A.Dev("1235425543", "183344").second << endl;
+}
 
 int main() {
 	//test();
-	//tesrRSA();
+	//testRSA();
 	//testBigIntAdd();
 	//testBigIntASub();
-	testBigIntMul();
+	//testBigIntMul();
+    testBigIntDev();
 	system("pause");
 	return 0;
 }
