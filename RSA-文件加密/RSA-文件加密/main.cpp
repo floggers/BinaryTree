@@ -22,44 +22,57 @@ void testRSA() {
 }
 
 void testBigIntAdd(){
-	BigInt A;
+	//BigInt A;
 	int a = 9234353;
 	int b = 876456;
 	cout << a + b << endl;
-	cout << A.Add("9234353", "876456") << endl;
+	//cout << A.Add("9234353", "876456") << endl;
+	BigInt A("9234353");
+	BigInt B("876456");
+	cout << A + B << endl;
 }
 
 void testBigIntASub() {
-	BigInt A;
+	//BigInt A;
 	int a = 1001;
 	int b = 999;
 	cout << a - b << endl;
-	cout << A.Sub("1001", "999") << endl;
+	//cout << A.Sub("1001", "999") << endl;
+	BigInt A("1001");
+	BigInt B("999");
+	cout << A - B << endl;
 }
 
 void testBigIntMul() {
-	BigInt A;
+	//BigInt A;
 	int a = 10000;
 	int b = 10;
 	cout << a * b << endl;
-	cout << A.Mul("10000", "10") << endl;
+	//cout << A.Mul("10000", "10") << endl;
+	BigInt A ("10000");
+	BigInt B("10");
+	cout << A * B << endl;
 }
 
 void testBigIntDev() {
-	BigInt A;
+	//BigInt A;
 	int a = 1235425543;
-	int b = 183344;
+	int b = 876456;
+
 	cout << a / b << "  " << a % b << endl;
-	cout << A.Dev("1235425543", "183344").first << "  " << A.Dev("1235425543", "183344").second << endl;
+	//cout << A.Dev(str1, str2).first << "  " << A.Dev(str1, str2).second << endl;
+	BigInt A("1235425543");
+	BigInt B("876456");
+	cout << A / B << "  " << A % B << endl;
 }
 
 int main() {
 	//test();
 	//testRSA();
-	//testBigIntAdd();
-	//testBigIntASub();
-	//testBigIntMul();
-    testBigIntDev();
+	testBigIntAdd();
+	testBigIntASub();
+	testBigIntMul();
+	testBigIntDev();
 	system("pause");
 	return 0;
 }

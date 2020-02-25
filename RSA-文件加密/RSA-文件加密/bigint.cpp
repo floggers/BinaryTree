@@ -1,5 +1,15 @@
-#include "bigint.h"
 
+#include "bigint.h"
+#include <iostream>
+#include <string>
+using namespace std;
+
+BigInt:: BigInt (const string& num) 
+	:m_number(num)
+{}
+BigInt::BigInt(const char* num)
+	: m_number(num)
+{}
 string BigInt::Add(string num1, string num2) {
 	int len1 = num1.size();
 	int len2 = num2.size();
@@ -105,7 +115,7 @@ pair<string, string> BigInt::Dev(string num1, string num2) {                 //½
 			ret += count;
 			count = '0';
 	}
-	while (ret[0] == '0') {
+	while (ret[0] == '0'&& ret.size()>1) {
 		ret.erase(0, 1);
 	}
 	rem = num1;
@@ -119,7 +129,37 @@ bool BigInt::CompareString_greater(string num1, string num2) {
 	else if (num1.size() < num2.size()) {
 		return false;
 	}
-	else {
+	else {         //³¤¶ÈÏàÍ¬Ê±
 		return num1 > num2;
 	}
+}
+
+BigInt BigInt:: operator + (BigInt& bi) {
+	string res = Add(m_number, bi.m_number);
+	return BigInt(res);
+}
+
+BigInt BigInt::operator - (BigInt& bi) {
+	string res = Sub(m_number, bi.m_number);
+	return BigInt(res);
+}
+
+BigInt BigInt::operator * (BigInt& bi) {
+	string res = Mul(m_number, bi.m_number);
+	return BigInt(res);
+}
+
+BigInt BigInt::operator / (BigInt& bi) {
+	pair<string, string> res = Dev(m_number, bi.m_number);
+	return BigInt(res.first);
+}
+
+BigInt BigInt::operator % (BigInt& bi) {
+	pair<string, string> res = Dev(m_number, bi.m_number);
+	return BigInt(res.second);
+}
+
+ostream& operator<<(ostream&os, BigInt& bi) {
+	os << bi.m_number;
+	return os;
 }
