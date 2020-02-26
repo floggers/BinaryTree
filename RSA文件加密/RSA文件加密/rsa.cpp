@@ -45,7 +45,7 @@ void RSA::Decrypt(const char* filename, const char* fileout) {
 		int num = fin.gcount();
 		num /= sizeof(DataType);
 		for (int i = 0;i < num;++i) {
-			bufferout[i] = Decrypt(buffer[i], _key._dkey, _key._nkey);
+			bufferout[i] =(char) Decrypt(buffer[i], _key._dkey, _key._nkey);
 		}
 		fout.write(bufferout, num);
 	}
@@ -68,16 +68,20 @@ void RSA::getKeys() {
 }
 
 DataType RSA::getPrime() {
-
-	srand(time(NULL));
+	cout << "getPrime()" << endl;
+	//srand(time(NULL));
+	boost::random::mt19937 gen(time(nullptr));
+	boost::random::uniform_int_distribution<DataType> dist(0, DataType(1) << 256);
 	DataType prime;
 
 	while (true) {
-		prime = rand() % 100 + 2;  // prime 2-101
-		if (isPrime(prime)) {
+	//	prime = rand() % 100 + 2;  // prime 2-101
+		prime = dist(gen);
+		if (isBigPrime(prime)) {
 			break;
 		}
 	}
+	cout << "get finish" << endl;
 	return prime;
 }
 
@@ -93,6 +97,16 @@ bool RSA::isPrime(DataType data) {
 		}
 	}
 	return true;
+}
+
+bool RSA::isBigPrime(DataType data) {
+	boost::random::mt11213b gen(time(nullptr));
+	if (miller_rabin_test(data, 25, gen)) {
+		if (miller_rabin_test((data - 1) / 2, 25, gen)) {
+			return true;
+		}
+	}
+	return false;
 }
 
 DataType RSA::getGcd(DataType data1, DataType data2) {   //Õ·×ªÏà³ý·¨
