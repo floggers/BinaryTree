@@ -27,6 +27,7 @@ public:
 	bool isBigPrime(DataType data);
 
 	DataType getGcd(DataType data1, DataType data2);  //GCD->Greatest Common Divisor最大公约数
+	DataType getGcd_plus(DataType a, DataType b, DataType& x, DataType& y);
 	DataType getNkey(DataType prime1, DataType prime2);
 	DataType getOrla(DataType prime1, DataType prime2);
 	DataType getEkey(DataType orla);

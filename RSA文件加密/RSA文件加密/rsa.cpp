@@ -118,6 +118,20 @@ DataType RSA::getGcd(DataType data1, DataType data2) {   //辗转相除法
 	return data2;
 }
 
+DataType RSA::getGcd_plus(DataType a, DataType b, DataType& x, DataType& y) {
+	if (b == 0) {
+		x = 1;
+		y = 0;
+		return a;
+	}
+	DataType gcd = getGcd_plus(b, a%b, x, y);
+	DataType x1 = x;
+	DataType y1 = y;
+	x = y1;
+	y = x1 - a / b*y1;
+	return gcd;
+}
+
 DataType RSA::getNkey(DataType prime1, DataType prime2) {
 
 	return prime1*prime2;
@@ -143,13 +157,19 @@ DataType RSA::getEkey(DataType orla) {
 }
 
 DataType RSA::getDkey(DataType ekey, DataType orla) {
-	DataType dkey = orla / ekey;
+	DataType x = 0;
+	DataType y = 0;
+	getGcd_plus(ekey, orla, x, y);
+	return (x%orla + orla) % orla;
+
+	//效率太低
+	/*DataType dkey = orla / ekey;
 	while (true) {
 		if ((ekey*dkey) % orla == 1) {
 			return dkey;
 		}
 		++dkey;
-	}
+	}*/
 }
 
 DataType RSA::Encrypt(DataType data, DataType ekey, DataType nkey) {      //明文加密    //模幂运算   //使用pow()会导致数据溢出
