@@ -1,0 +1,6 @@
+﻿  main.cpp
+d:\编程\source code\daily-code\剑指offer-day_06\剑指offer-day_06\main.cpp(26): warning C4018: “<”: 有符号/无符号不匹配
+d:\编程\source code\daily-code\剑指offer-day_06\剑指offer-day_06\main.cpp(37): warning C4018: “>=”: 有符号/无符号不匹配
+d:\编程\source code\daily-code\剑指offer-day_06\剑指offer-day_06\main.cpp(42): warning C4018: “<”: 有符号/无符号不匹配
+  剑指offer-day_06.vcxproj -> D:\编程\source code\Daily-code\剑指offer-day_06\Debug\剑指offer-day_06.exe
+  剑指offer-day_06.vcxproj -> D:\编程\source code\Daily-code\剑指offer-day_06\Debug\剑指offer-day_06.pdb (Partial PDB)
