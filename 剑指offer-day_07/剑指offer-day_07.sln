@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.26730.16
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "剑指offer-day_07", "剑指offer-day_07\剑指offer-day_07.vcxproj", "{490C66A0-144D-435D-855B-152277426E98}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{490C66A0-144D-435D-855B-152277426E98}.Debug|x64.ActiveCfg = Debug|x64
+		{490C66A0-144D-435D-855B-152277426E98}.Debug|x64.Build.0 = Debug|x64
+		{490C66A0-144D-435D-855B-152277426E98}.Debug|x86.ActiveCfg = Debug|Win32
+		{490C66A0-144D-435D-855B-152277426E98}.Debug|x86.Build.0 = Debug|Win32
+		{490C66A0-144D-435D-855B-152277426E98}.Release|x64.ActiveCfg = Release|x64
+		{490C66A0-144D-435D-855B-152277426E98}.Release|x64.Build.0 = Release|x64
+		{490C66A0-144D-435D-855B-152277426E98}.Release|x86.ActiveCfg = Release|Win32
+		{490C66A0-144D-435D-855B-152277426E98}.Release|x86.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {D8E1925C-8498-4C18-9BCE-BEB0827B1BBD}
+	EndGlobalSection
+EndGlobal
