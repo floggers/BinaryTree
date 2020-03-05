@@ -96,6 +96,37 @@ public:
 			isSubTree(pRoot1->right, pRoot2->right);
 	}
 
+	bool isSubtree1(TreeNode* pRoot1, TreeNode* pRoot2){
+		if (pRoot2 == NULL) {    //B同时或先到达叶子结点
+			return true;
+		}
+		else if (pRoot1 == NULL){   //B不是空，但A是空，说明A先到达叶子结点
+			return false; 
+		}  
+		if (pRoot1->val == pRoot2->val) {
+			return isSubtree1(pRoot1->left, pRoot2->left) && isSubtree1(pRoot1->right, pRoot2->right);
+		}
+		else {
+			return false;
+		}
+	}
+	bool HasSubtree1(TreeNode* pRoot1, TreeNode* pRoot2){
+		if (pRoot2 == NULL) {
+			return false;
+		}
+		else if (pRoot1 == NULL) {  // A先到达叶子结点
+			return false;
+		}
+		bool flag = false;
+		if (pRoot1->val == pRoot2->val) {
+			flag = isSubtree1(pRoot1, pRoot2);
+		}
+		if (!flag) {
+			flag = HasSubtree1(pRoot1->left, pRoot2) || HasSubtree1(pRoot1->right, pRoot2);
+		}
+		return flag;
+	}
+
 };
 
 int main() {
