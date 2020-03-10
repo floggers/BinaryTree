@@ -1,4 +1,6 @@
 #include <iostream>
+#include <set>
+#include <vector>
 using namespace std;
 
 class Solution {
@@ -42,13 +44,32 @@ public:
 	}
 };
 
+void TestSet() {
+	// 用数组array中的元素构造set   
+	vector<int> v = { 1, 3, 5, 7, 9, 2, 4, 6, 8, 0, 1, 3, 5, 7, 9, 2, 4, 6, 8, 0 };
+	set<int> s(v.begin(), v.end());
+	//for (int i : arr) {
+	//	s.insert(i);
+	//}
+	cout << s.size() << endl;
+
+	// 正向打印set中的元素，从打印结果中可以看出：set可去重  
+	for (auto& e : s)
+		cout << e << " ";    cout << endl;
+
+	// 使用迭代器逆向打印set中的元素 
+	for (auto it = s.rbegin(); it != s.rend(); ++it)        cout << *it << " ";    cout << endl;
+
+	// set中值为3的元素出现了几次   
+	cout << s.count(3) << endl;
+}
+
 int main() {
+	
 	int arr[] = { 6,3,1,5,4,7,9,8 };
 	Solution A;
 	A.QuickSort(arr, 0, 7);
-	for (auto& i : arr) {
-		cout << i << "  ";
-	}
+TestSet();
 	system("pause");
 	return 0;
 }
