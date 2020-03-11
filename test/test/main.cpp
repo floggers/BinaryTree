@@ -42,6 +42,20 @@ public:
 		QuickSort(array, start, left);
 		QuickSort(array, right, end);
 	}
+
+	vector<int> GetLeastNumbers_Solution(vector<int> input, int k) {
+		vector<int> res;
+		set<int> buf(input.begin(), input.end());
+		for (auto &i : buf) {
+			res.push_back(i);
+			int len = res.size();
+			if (len == k) {
+				break;
+			}
+		}
+		return res;
+	}
+
 };
 
 void TestSet() {
@@ -65,11 +79,14 @@ void TestSet() {
 }
 
 int main() {
-	
+	vector<int> v = { 4,5,1,3,7,6,8,2,9 };
 	int arr[] = { 6,3,1,5,4,7,9,8 };
 	Solution A;
-	A.QuickSort(arr, 0, 7);
-TestSet();
+	//A.QuickSort(arr, 0, 7);
+	//TestSet();
+	for (auto &i : A.GetLeastNumbers_Solution(v, 4)) {
+		cout << i << ' ';
+	}
 	system("pause");
 	return 0;
 }
