@@ -44,8 +44,11 @@ public:
 	}
 
 	vector<int> GetLeastNumbers_Solution(vector<int> input, int k) {
+		if (k > input.size()|| k==0) {
+			return vector<int>(0);
+		}
 		vector<int> res;
-		set<int> buf(input.begin(), input.end());
+		multiset<int> buf(input.begin(), input.end());
 		for (auto &i : buf) {
 			res.push_back(i);
 			int len = res.size();
