@@ -11,7 +11,7 @@ public:
 		*b = tmp;
 	}
 
-	void QuickSort(int* array,int left,int right) {
+	void QuickSort(int* array,int left,int right) {                 //堆排
 		if (left == right) {
 			return;
 		}
@@ -43,6 +43,28 @@ public:
 		QuickSort(array, right, end);
 	}
 
+	void HeapSort(int* array, int num) {        //num表示元素总个数
+		for (int i = num - 1;i > 0;--i) {
+			MakeHeap(array, i);
+			swap(&array[0], &array[i]);
+		}
+	}
+
+	void MakeHeap(int* array, int end) {           //end表示最后一个元素下标
+		int len = (end - 1) / 2;                 //len表示最后一个非叶子节点的下标
+		for (int i = len;i >= 0;--i) {
+			int leftson = 2 * i + 1;
+			int rightson = 2 * i + 2;
+			int big_sig = leftson;
+			if (rightson <= end&&array[rightson] > array[leftson]) {
+				big_sig = rightson;
+			}
+			if (array[big_sig] > array[i]) {
+				swap(&array[big_sig], &array[i]);
+			}
+		}
+	}
+
 	vector<int> GetLeastNumbers_Solution(vector<int> input, int k) {
 		if (k > input.size()|| k==0) {
 			return vector<int>(0);
@@ -58,6 +80,8 @@ public:
 		}
 		return res;
 	}
+
+
 
 };
 
@@ -83,11 +107,12 @@ void TestSet() {
 
 int main() {
 	vector<int> v = { 4,5,1,3,7,6,8,2,9 };
-	int arr[] = { 6,3,1,5,4,7,9,8 };
+	int arr[] = { 8,7,6,5,4,3,2,1 };
 	Solution A;
 	//A.QuickSort(arr, 0, 7);
 	//TestSet();
-	for (auto &i : A.GetLeastNumbers_Solution(v, 4)) {
+	A.HeapSort(arr, 8);
+	for (auto &i:arr) {
 		cout << i << ' ';
 	}
 	system("pause");
