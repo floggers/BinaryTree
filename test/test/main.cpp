@@ -106,15 +106,15 @@ void TestSet() {
 }
 
 int main() {
-	vector<int> v = { 4,5,1,3,7,6,8,2,9 };
-	int arr[] = { 8,7,6,5,4,3,2,1 };
-	Solution A;
+	 vector<int> v = { 4,5,1,3,7,6,8,2,9 };
+	 int arr[] = { 8,7,6,5,4,3,2,1 };
+	 Solution A;
 	//A.QuickSort(arr, 0, 7);
 	//TestSet();
-	A.HeapSort(arr, 8);
-	for (auto &i:arr) {
-		cout << i << ' ';
-	}
-	system("pause");
-	return 0;
+	 A.HeapSort(arr, 8);
+	 for (auto &i:arr) {
+	 	 cout << i << ' ';
+	 }
+	 system("pause");
+	 return 0;
 }
