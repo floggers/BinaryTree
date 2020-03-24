@@ -11,7 +11,7 @@ public:
 		*b = tmp;
 	}
 
-	void QuickSort(int* array,int left,int right) {                 //堆排
+	void QuickSort(int* array,int left,int right) {                 //快排
 		if (left == right) {
 			return;
 		}
@@ -43,7 +43,7 @@ public:
 		QuickSort(array, right, end);
 	}
 
-	void HeapSort(int* array, int num) {        //num表示元素总个数
+	void HeapSort(int* array, int num) {        //堆排                       //num表示元素总个数
 		for (int i = num - 1;i > 0;--i) {
 			MakeHeap(array, i);
 			swap(&array[0], &array[i]);
