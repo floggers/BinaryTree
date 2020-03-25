@@ -57,6 +57,25 @@ public:
 		return result;
 	}
 
+	bool isUgly_num(int n) {
+		if (n == 0) {
+			return false;
+		}
+		if (n == 1) {
+			return true;
+		}
+		if(n%2)
+	}
+
+	int GetUglyNumber_Solution(int index) {
+		if (index == 0) {
+			return 0;
+		}
+		else if (index == 1) {
+			return 1;
+		}
+	}
+
 	/*void test() {
 		char *str[] = { "32","321","323","3" };
 		sort(str, str + 4, compare);
