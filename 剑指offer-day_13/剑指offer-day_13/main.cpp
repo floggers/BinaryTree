@@ -57,23 +57,21 @@ public:
 		return result;
 	}
 
-	bool isUgly_num(int n) {
-		if (n == 0) {
-			return false;
-		}
-		if (n == 1) {
-			return true;
-		}
-		if(n%2)
-	}
-
 	int GetUglyNumber_Solution(int index) {
-		if (index == 0) {
+		if (index <= 0) {
 			return 0;
 		}
-		else if (index == 1) {
-			return 1;
+		int p2 = 0, p3 = 0, p5 = 0;
+		vector<int> ugly_num;
+		ugly_num.resize(index);
+		ugly_num[0] = 1;
+		for (int i = 1;i < index;++i) {
+			ugly_num[i] = min(ugly_num[p2] * 2, min(ugly_num[p3] * 3, ugly_num[p5] * 5));
+			if (ugly_num[i] == ugly_num[p2] * 2) p2++;
+			if (ugly_num[i] == ugly_num[p3] * 3) p3++;
+			if (ugly_num[i] == ugly_num[p5] * 5) p5++;
 		}
+		return ugly_num[index - 1];
 	}
 
 	/*void test() {
@@ -88,9 +86,10 @@ public:
 int main() {
 	Solution A;
 	vector<int> v = { 3,1,32,4,2};
-	cout << A.PrintMinNumber(v);
+	//cout << A.PrintMinNumber(v);
 	//cout << A.compare("3", "3");
 	//A.test();
+	cout << A.GetUglyNumber_Solution(12);
 	system("pause");
 	return 0;
 }
