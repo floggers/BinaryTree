@@ -128,14 +128,14 @@ public:
 		return ret;
 	}
 
-	string Say_lst_6num(int num) {
-		string ret = Fib(num)[num-1];
-		int size = ret.size();
-		if (size <= 6) {
-			ret = ret;
-		}
-		else {
-			ret=ret.substr(size-6);
+	vector<string> solution() {
+		Solution B;
+		vector<string> ret;
+		ret.resize(100000 + 1);
+		ret[0] = "1";
+		ret[1] = "2";
+		for (int i = 2;i < 100000;++i) {
+			ret[i] = Add(ret[i - 2], ret[i - 1]);
 		}
 		return ret;
 	}
@@ -158,7 +158,6 @@ public:
 	}
 
 };
-
 int main() {
 	Solution A;
 	/*int year1, year2, month1, month2, day1, day2;
@@ -166,9 +165,24 @@ int main() {
 		cout << A.Income(year1, month1, day1, year2, month2, day2) << endl;
 	}*/
 
+	/*	vector<string> ret;
+		ret.resize(100000 + 1);
+		ret[0] = "1";
+		ret[1] = "2";
+		for (int i = 2;i < 100000;++i) {
+			ret[i] = A.Add(ret[i - 2], ret[i - 1]);
+		}*/
+	vector<string> ret = A.solution();
 	int num;
 	while (cin >> num) {
-		cout << A.Say_lst_6num(num)<< endl;
+        int size = ret[num-1].size();
+		if (size <= 6) {
+			ret[num-1] = ret[num-1];
+		}
+		else {
+			ret[num-1]=ret[num-1].substr(size-6);
+		}
+		cout <<ret[num-1] << endl;
 	}
 
 	//A.testAdd();
