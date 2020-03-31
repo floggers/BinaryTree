@@ -50,14 +50,14 @@ public:
 			profit += day2;
 		}
 		else {
-			profit += day2 * 2;
+			profit += (day2 * 2);
 		}
-	/*	if (isPrime(month1)) {
-			profit -= (day1-1);
+		if (isPrime(month1)) {
+			profit =profit- (day1-1);
 		}
 		else {
-			profit -= (day1-1) * 2;
-		}*/
+			profit =profit - ((day1-1) * 2);
+		}
 		return profit;
 	}
 
@@ -160,19 +160,13 @@ public:
 };
 int main() {
 	Solution A;
-	/*int year1, year2, month1, month2, day1, day2;
+	 int year1, month1, day1, year2, month2, day2;
 	while (cin >> year1 >> month1 >> day1 >> year2 >> month2 >> day2) {
 		cout << A.Income(year1, month1, day1, year2, month2, day2) << endl;
-	}*/
+	}
 
-	/*	vector<string> ret;
-		ret.resize(100000 + 1);
-		ret[0] = "1";
-		ret[1] = "2";
-		for (int i = 2;i < 100000;++i) {
-			ret[i] = A.Add(ret[i - 2], ret[i - 1]);
-		}*/
-	vector<string> ret = A.solution();
+
+	/*vector<string> ret = A.solution();
 	int num;
 	while (cin >> num) {
         int size = ret[num-1].size();
@@ -183,7 +177,7 @@ int main() {
 			ret[num-1]=ret[num-1].substr(size-6);
 		}
 		cout <<ret[num-1] << endl;
-	}
+	}*/
 
 	//A.testAdd();
 
