@@ -26,6 +26,20 @@ public:
 		}
 		return count;
 	}
+
+	int Longest_child2(string str1, string str2) {
+		set<char> res;
+		for (int i = 0;i < str1.size();++i) {
+			size_t pos = 0;
+			pos = str2.find(str1[i]);
+			if (pos != -1) {
+				res.insert(str1[i]);
+				str2.erase(pos, 1);
+			}
+		}
+		return res.size();
+	}
+
 };
 
 int main() {
@@ -33,7 +47,7 @@ int main() {
 	while (1) {
 		string str1, str2;
 		cin >> str1 >> str2;
-		cout << A.Longest_child(str1, str2) << endl;
+		cout << A.Longest_child2(str1, str2) << endl;
 	}
 	system("pause");
 	return 0;
