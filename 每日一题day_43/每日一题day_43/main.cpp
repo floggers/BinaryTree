@@ -25,7 +25,7 @@ int main() {
 				}
 			}
 		}
-		cout << dp[n][m] << endl;
+		
 	}
 	system("pause");
 	return 0;
