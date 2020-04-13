@@ -5,7 +5,7 @@
 #include <algorithm>
 using namespace std;
 
-#if 1
+#if 0
 int main() {
 	int n, m;
 	while (cin >> n) {
@@ -30,6 +30,56 @@ int main() {
 	system("pause");
 	return 0;
 }
+#endif
+
+#if 1
+int len;
+void findSum(int n, int m, int* p,vector<vector<string>> &res) {
+	if (m < 1 || n < 1) {
+		return;
+	}
+	if (n > m) {
+		n = m;
+	}
+	if (n == m) {
+		p[n - 1] = 1;
+		vector<string> buf;
+		for (int i = 0;i < len;++i) {
+			if (p[i] == 1) {
+				buf.push_back(to_string(i + 1));
+				buf.push_back(" ");
+			}
+		}
+		buf.pop_back();
+		res.push_back(buf);
+		p[n - 1] = 0;
+	}
+	p[n - 1] = 1;
+	findSum(n - 1, m - n, p,res);
+	p[n - 1] = 0;
+	findSum(n - 1, m , p,res);
+}
+
+int main() {
+	int n, m;
+	while (cin >> n) {
+		cin >> m;
+		vector<vector<string>> res;
+		int* p = new int[n];
+		len = n;
+		findSum(n, m, p,res);
+		delete[] p;
+		for (auto &i : res) {
+			for (auto &e : i) {
+				cout << e;
+			}
+			cout << endl;
+		}
+	}
+	system("pause");
+	return 0;
+}
+
 #endif
 
 #if 0
