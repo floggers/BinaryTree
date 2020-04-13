@@ -1,4 +1,2 @@
 ﻿  main.cpp
-d:\编程\source code\daily-code\每日一题day_43\每日一题day_43\main.cpp(91): warning C4018: “<”: 有符号/无符号不匹配
-  每日一题day_43.vcxproj -> D:\编程\source code\Daily-code\每日一题day_43\Debug\每日一题day_43.exe
-  每日一题day_43.vcxproj -> D:\编程\source code\Daily-code\每日一题day_43\Debug\每日一题day_43.pdb (Partial PDB)
+d:\编程\source code\daily-code\每日一题day_43\每日一题day_43\main.cpp : fatal error C1041: 无法打开程序数据库“D:\编程\source code\Daily-code\每日一题day_43\每日一题day_43\Debug\vc141.idb”；如果要将多个 CL.EXE 写入同一个 .PDB 文件，请使用 /FS

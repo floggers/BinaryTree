@@ -5,28 +5,31 @@
 #include <algorithm>
 using namespace std;
 
-#if 0
+#if 1
 int main() {
 	int n, m;
 	while (cin >> n) {
 		cin >> m;
-		for (int i = 1;i <= n;++i) {
-			for (int j = n;j >= i;--j) {
-				if (i + j == m) {
-				  /*int min = i < j ? i : j;
-					int max = i > j ? i : j;*/
-					cout << i <<" "<<j << endl;
+		vector<vector<int>> dp(n + 1, vector<int>(m + 1, 0));
+		dp[1][1] = 1;
+		for (int i = 2;i <= n;++i) {
+			for (int j = 1;j <= m;++j) {
+				if (i < j) {
+					dp[i][j] = dp[i - 1][j] + dp[i - 1][j - i];
+				}
+				else if (i == j) {
+					dp[i][j] = dp[i - 1][j] + 1;
+				}
+				else {
+					dp[i][j] = dp[i - 1][j];
 				}
 			}
 		}
-		if (n >= m) {
-			cout << m << endl;
-		}
+		cout << dp[n][m] << endl;
 	}
 	system("pause");
 	return 0;
 }
-
 #endif
 
 #if 0
@@ -76,7 +79,7 @@ int main()
 }
 #endif
 
-#if 1
+#if 0
 int main() {
 	string s;
 	int length;
