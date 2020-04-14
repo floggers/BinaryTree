@@ -116,7 +116,7 @@ void test(string s) {
 	cout << s;
 }
 #define STR "888"
-
+/*
 int main() {
 	 vector<int> v = { 4,5,1,3,7,6,8,2,9 };
 	 int arr[] = { 8,7,6,5,4,3,2,1 };
@@ -130,4 +130,41 @@ int main() {
 	 test(STR);
 	 system("pause");
 	 return 0;
+}
+*/
+#define N 100
+int length;
+void findsum(int n, int *p, int m){
+	if (n < 1 || m < 1){
+		return;
+	}
+	if (n > m){
+		n = m;
+	}
+	if (n == m){
+		p[n - 1] = 1;
+		for (int i = 0; i < length; i++){
+			if (p[i] == 1){
+				printf("%d  ", i + 1);
+			}
+		}
+		printf("\n");
+		p[n - 1] = 0;
+	}
+	p[n - 1] = 1;
+	findsum(n - 1, p, m - n);
+	p[n - 1] = 0;
+	findsum(n - 1, p, m);
+}
+void main(){
+	int n, m;
+	printf("ÇëÊäÈën=\n");
+	scanf("%d", &n);
+	length = n;
+	printf("ÇëÊäÈëm=\n");
+	scanf("%d", &m);
+	int *p;
+	p = (int *)malloc(sizeof(int)*n);
+	findsum(n, p, m);
+	system("pause");
 }
