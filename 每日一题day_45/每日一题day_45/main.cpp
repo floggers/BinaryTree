@@ -49,6 +49,7 @@ int main() {
 		int count = 0;
 		int tmp = 0;
 		for (int i = 0;i < res.size();++i) {
+			string buf = res[i];
 			if (res[i] == brother) {
 				continue;
 			}
@@ -66,6 +67,7 @@ int main() {
 						res[i][pos] = '0';
 					}
 				}
+				res[i] = buf;
 				if (flag) {
 					count++;
 					if (count == k) {
@@ -75,10 +77,11 @@ int main() {
 			}
 		}
 		cout << count << endl;
-		cout << res[tmp] << endl;
+		if (count >= k) {
+			cout << res[tmp] << endl;
+		}
 	}
 	system("pause");
 	return 0;
 }
-
 #endif
