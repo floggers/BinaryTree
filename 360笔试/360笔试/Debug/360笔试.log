@@ -1,0 +1,4 @@
+﻿  main.cpp
+d:\编程\source code\daily-code\360笔试\360笔试\main.cpp(25): warning C4477: “printf”: 格式字符串“%.5f”需要类型“double”的参数，但可变参数 1 拥有了类型“int”
+  360笔试.vcxproj -> D:\编程\source code\Daily-code\360笔试\Debug\360笔试.exe
+  360笔试.vcxproj -> D:\编程\source code\Daily-code\360笔试\Debug\360笔试.pdb (Partial PDB)
