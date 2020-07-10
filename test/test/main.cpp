@@ -4,7 +4,7 @@
 #include <vector>
 using namespace std;
 
-class Solution {
+class Solution1 {
 public:
 	void swap(int* a, int* b) {
 		int tmp = *a;
@@ -156,8 +156,36 @@ void findsum(int n, int *p, int m){
 	p[n - 1] = 0;
 	findsum(n - 1, p, m);
 }
-void main(){
-	int n, m;
+
+class Solution {
+public:
+	int minArray(vector<int>& numbers) {
+		if (numbers.size() == 1) {
+			return numbers[0];
+		}
+		else if (numbers.size() == 0) {
+			return -1;
+		}
+		int size = numbers.size();
+		numbers.insert(numbers.end(), numbers.begin(), numbers.end());
+		int count = 0;
+		for (int i = 0;i < numbers.size() - 1;++i) {
+			if (numbers[i] <= numbers[i + 1]) {
+				++count;
+			}
+			else {
+				count = 0;
+			}
+			if (count == size-1) {
+				return numbers[i - size +2];
+			}
+		}
+		return 0;
+	}
+};
+
+int main(){
+	/*int n, m;
 	printf("ÇëÊäÈën=\n");
 	scanf("%d", &n);
 	length = n;
@@ -165,6 +193,12 @@ void main(){
 	scanf("%d", &m);
 	int *p;
 	p = (int *)malloc(sizeof(int)*n);
-	findsum(n, p, m);
+	findsum(n, p, m);*/
+	Solution A;
+	vector<int> vec = { 3,4,5,1,2 };
+	cout<<A.minArray(vec);
 	system("pause");
+	return 0;
+	
 }
+
