@@ -194,9 +194,13 @@ int main(){
 	int *p;
 	p = (int *)malloc(sizeof(int)*n);
 	findsum(n, p, m);*/
-	Solution A;
-	vector<int> vec = { 3,4,5,1,2 };
-	cout<<A.minArray(vec);
+	vector<vector<int>> vvit(3, vector<int>(2, 0));
+	for (auto &e : vvit) {
+		for (auto &i : e) {
+			cout << i << " ";
+		}
+		cout << endl;
+	}
 	system("pause");
 	return 0;
 	
