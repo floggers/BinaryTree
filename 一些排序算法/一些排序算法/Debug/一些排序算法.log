@@ -1,2 +1,3 @@
 ﻿  main.cpp
-d:\编程\source code\daily-code\一些排序算法\一些排序算法\main.cpp : fatal error C1041: 无法打开程序数据库“D:\编程\source code\Daily-code\一些排序算法\一些排序算法\Debug\vc141.idb”；如果要将多个 CL.EXE 写入同一个 .PDB 文件，请使用 /FS
+  一些排序算法.vcxproj -> D:\编程\source code\Daily-code\一些排序算法\Debug\一些排序算法.exe
+  一些排序算法.vcxproj -> D:\编程\source code\Daily-code\一些排序算法\Debug\一些排序算法.pdb (Partial PDB)
