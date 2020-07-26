@@ -55,6 +55,36 @@ void HeapSort(int*arr, int num) {  //num表示元素总数
 
 /******************************************************** 归  并 *******************************************************/
 
+void merge(int* ans, int start, int middle, int end) {
+	int* res = new int[end - start + 1];
+	int i = start, j = middle + 1;
+	int p = 0;
+	while (i <= middle&&j <= end) {
+		res[p++] = ans[i] < ans[j] ? ans[i++] : ans[j++];
+	}
+	while (i <= middle) {
+		res[p++] = ans[i++];
+	}
+	while (j <= end) {
+		res[p++] = ans[j++];
+	}
+	for (int m = 0, n = start;n <= end;++m, ++n) {
+		ans[n] = res[m];
+	}
+	//delete[] res;
+}
+
+void MergeSort(int* ans, int start, int end) {
+	if (start == end) {
+		return;
+	}
+	int middle = (end + start) / 2;
+	MergeSort(ans, start, middle);
+	MergeSort(ans, middle + 1, end);
+	merge(ans, start, middle, end);
+	
+}
+
 /********************************************************选择排序*******************************************************/
 
 void SelectSort(int* arr, int size) {
@@ -76,7 +106,8 @@ int main() {
 	int arr[] = { 1,9,1,2,4,0,1,1 };
 	//QuickSort(arr, 0, 7);
 	//HeapSort(arr, 8);
-	SelectSort(arr, 8);
+	//SelectSort(arr, 8);
+	MergeSort(arr, 0, 7);
 	for (auto &e : arr) {
 		cout << e << " ";
 	}
