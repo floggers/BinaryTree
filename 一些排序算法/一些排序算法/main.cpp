@@ -103,7 +103,7 @@ void SelectSort(int* arr, int size) {
 
 
 int main() {
-	int arr[] = { 1,9,1,2,4,0,1,1 };
+	int arr[] = { 1,2,3,4,5,6,7,8 };
 	//QuickSort(arr, 0, 7);
 	//HeapSort(arr, 8);
 	//SelectSort(arr, 8);
