@@ -101,13 +101,27 @@ void SelectSort(int* arr, int size) {
 	}
 }
 
+/********************************************************√∞≈›≈≈–Ú*******************************************************/
+
+void BubbleSort(int* arr, int size) {
+	for (int i = 0;i < size;++i) {
+		for (int j = size - 1;j > i;--j) {
+			if (arr[j - 1] > arr[j]) {
+				swap(arr[j - 1], arr[j]);
+			}
+		}
+	}
+}
+
+
 
 int main() {
-	int arr[] = { 1,2,3,4,5,6,7,8 };
+	int arr[] = { 8,1,3,2,6,0,9,5 };
 	//QuickSort(arr, 0, 7);
 	//HeapSort(arr, 8);
 	//SelectSort(arr, 8);
-	MergeSort(arr, 0, 7);
+	//MergeSort(arr, 0, 7);
+	BubbleSort(arr, 8);
 	for (auto &e : arr) {
 		cout << e << " ";
 	}
