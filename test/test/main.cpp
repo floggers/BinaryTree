@@ -184,6 +184,28 @@ public:
 	}
 };
 
+int Find(string parent, string child) {
+	if (child.size() > parent.size()) {
+		return 0;
+	}
+	int i = 0;
+	while (parent.find(child)!= -1) {
+		++i;
+		int pos = parent.find(child);
+		parent = parent.substr(pos + 1);
+	}
+	return i;
+}
+
+void test1() {
+	string parent;
+	string child;
+	while (cin >> parent ) {
+		cin >> child;
+		cout << Find(parent, child) << endl;
+	}
+}
+
 int main(){
 	/*int n, m;
 	printf("ÇëÊäÈën=\n");
@@ -194,13 +216,14 @@ int main(){
 	int *p;
 	p = (int *)malloc(sizeof(int)*n);
 	findsum(n, p, m);*/
-	vector<vector<int>> vvit(3, vector<int>(2, 0));
+	/*vector<vector<int>> vvit(3, vector<int>(2, 0));
 	for (auto &e : vvit) {
 		for (auto &i : e) {
 			cout << i << " ";
 		}
 		cout << endl;
-	}
+	}*/
+	test1();
 	system("pause");
 	return 0;
 	
