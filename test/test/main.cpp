@@ -218,16 +218,14 @@ struct TreeNode {
 	{}
 };
 
-void MakeTree(TreeNode* root, int& n) {
+TreeNode* MakeTree(int n,int num) {
+	TreeNode* root = new TreeNode(num);
+	int tmp = root->val;
 	if (n <= 1) {
-		return;
+		root->left = MakeTree(--n, 2 * tmp);
+		root->right = MakeTree(--n, 2 * tmp + 1);
 	}
-	int num = root->val;
-	root->left->val = 2 * num;
-	root->right->val = 2 * num + 1;
-	--n;
-	MakeTree(root->left, n);
-	MakeTree(root->right, n);
+	return root;
 }
 
 vector<int> Read(TreeNode* root, int m) {
@@ -249,10 +247,10 @@ vector<int> Read(TreeNode* root, int m) {
 
 void test2() {
 	int P, M;
-	TreeNode* root = new TreeNode(1);
+	//TreeNode* root = new TreeNode(1);
 	vector<int> res;
 	while (cin >> P >> M) {
-		MakeTree(root, P);
+		TreeNode* root = MakeTree(P, 1);
 		res = Read(root, M);
 		for (auto &e : res) {
 			cout << e << endl;
