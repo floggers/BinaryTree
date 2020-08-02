@@ -2,6 +2,7 @@
 #include <set>
 #include <string>
 #include <vector>
+#include <queue>
 using namespace std;
 
 class Solution1 {
@@ -206,6 +207,59 @@ void test1() {
 	}
 }
 
+struct TreeNode {
+	int val;
+	TreeNode* left;
+	TreeNode* right;
+	TreeNode(int x)
+		:val(x),
+		left(nullptr),
+		right(nullptr)
+	{}
+};
+
+void MakeTree(TreeNode* root, int& n) {
+	if (n <= 1) {
+		return;
+	}
+	int num = root->val;
+	root->left->val = 2 * num;
+	root->right->val = 2 * num + 1;
+	--n;
+	MakeTree(root->left, n);
+	MakeTree(root->right, n);
+}
+
+vector<int> Read(TreeNode* root, int m) {
+	vector<int> res;
+	queue<TreeNode*> qu;
+	qu.push(root);
+	while (!qu.empty()) {
+		TreeNode* tmp = qu.front();
+		if (tmp->val == m && tmp->left && tmp->right) {
+			swap(tmp->left, tmp->right);
+		}
+		res.push_back(tmp->val);
+		qu.pop();
+		if (tmp->left) qu.push(tmp->left);
+		if (tmp->right) qu.push(tmp->right);
+	}
+	return res;
+}
+
+void test2() {
+	int P, M;
+	TreeNode* root = new TreeNode(1);
+	vector<int> res;
+	while (cin >> P >> M) {
+		MakeTree(root, P);
+		res = Read(root, M);
+		for (auto &e : res) {
+			cout << e << endl;
+		}
+	}
+}
+
 int main(){
 	/*int n, m;
 	printf("ÇëÊäÈën=\n");
@@ -223,7 +277,8 @@ int main(){
 		}
 		cout << endl;
 	}*/
-	test1();
+	//test1();
+	test2();
 	system("pause");
 	return 0;
 	
