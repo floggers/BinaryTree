@@ -6,7 +6,7 @@ using namespace std;
 
 
 int main(){
-#if 1
+#if 0
 	vector<int> star;
 	int n;
 	for (int i = 0;i < 5;++i) {
@@ -65,6 +65,13 @@ int main(){
 		cout << money << endl;
 	}
 #endif
+	
+#if 1
+	unsigned int n = INT_MAX;
+	cout << n+1 << endl;
+
+#endif
+
 system("pause");
 return 0;
 }
