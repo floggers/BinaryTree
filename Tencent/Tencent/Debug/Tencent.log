@@ -1,0 +1,4 @@
+﻿  main.cpp
+d:\编程\source code\daily-code\tencent\tencent\main.cpp(71): warning C4018: “<”: 有符号/无符号不匹配
+  Tencent.vcxproj -> D:\编程\source code\Daily-code\Tencent\Debug\Tencent.exe
+  Tencent.vcxproj -> D:\编程\source code\Daily-code\Tencent\Debug\Tencent.pdb (Partial PDB)
