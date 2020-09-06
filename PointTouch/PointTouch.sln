@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.26730.16
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "PointTouch", "PointTouch\PointTouch.vcxproj", "{97ABCA9A-F795-47FF-B7D6-C79C86699FCD}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{97ABCA9A-F795-47FF-B7D6-C79C86699FCD}.Debug|x64.ActiveCfg = Debug|x64
+		{97ABCA9A-F795-47FF-B7D6-C79C86699FCD}.Debug|x64.Build.0 = Debug|x64
+		{97ABCA9A-F795-47FF-B7D6-C79C86699FCD}.Debug|x86.ActiveCfg = Debug|Win32
+		{97ABCA9A-F795-47FF-B7D6-C79C86699FCD}.Debug|x86.Build.0 = Debug|Win32
+		{97ABCA9A-F795-47FF-B7D6-C79C86699FCD}.Release|x64.ActiveCfg = Release|x64
+		{97ABCA9A-F795-47FF-B7D6-C79C86699FCD}.Release|x64.Build.0 = Release|x64
+		{97ABCA9A-F795-47FF-B7D6-C79C86699FCD}.Release|x86.ActiveCfg = Release|Win32
+		{97ABCA9A-F795-47FF-B7D6-C79C86699FCD}.Release|x86.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {8800C806-F8FF-4263-B47D-C3A42702757F}
+	EndGlobalSection
+EndGlobal
