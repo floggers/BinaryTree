@@ -4,6 +4,13 @@
 #include <algorithm>
 using namespace std;
 
+struct ListNode {
+	int val;
+	struct ListNode* next;
+	ListNode():
+		val(),
+		next(nullptr){}
+};
 
 int main(){
 #if 0
@@ -66,9 +73,30 @@ int main(){
 	}
 #endif
 	
-#if 1
+#if 0
 	unsigned int n = INT_MAX;
 	cout << n+1 << endl;
+
+#endif
+
+#if 1
+	//³õÊ¼»¯Á´±í
+	int a;
+	cin >> a;
+	ListNode *head = new ListNode();
+	ListNode *q, *n;
+	head->next = nullptr;
+	q = head;
+	for (int i = 0;i < a;++i) {
+		n = new ListNode();
+		cin >> n->val;
+		q->next = n;
+		n->next = nullptr;
+		q = n;
+	}
+	for (ListNode *cur = head->next;cur;cur = cur->next) {
+		cout << cur->val << " ";
+	}
 
 #endif
 
