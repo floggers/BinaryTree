@@ -9,7 +9,7 @@ public:
 		return _str;
 	}
 
-	String(const char* str)
+	String(const char* str=nullptr)
 		:_str(new char[strlen(str) + 1])
 	{
 		strcpy(_str, str);
@@ -30,17 +30,17 @@ public:
 		}
 	}
 
-	String operator+(const String& s) {
-		char* p = new char(strlen(_str) + strlen(s._str) + 1);
-		strcpy(p, _str);
-		strcat(p, s._str);
+	friend String operator+(const String& s1, const String& s2) {
+		char* p = new char[strlen(s1._str) + strlen(s2._str) + 1];
+		strcpy(p, s1._str);
+		strcat(p, s2._str);
 		String tmp(p);
 		delete[] p;
 		return tmp;
 	}
 
 	String& operator+=(const String& s) {
-		char* p = new char(strlen(_str) + strlen(s._str) + 1);
+		char* p = new char[strlen(_str) + strlen(s._str) + 1];
 		strcpy(p, _str);
 		strcat(p, s._str);
 		delete[] _str;
@@ -95,13 +95,26 @@ public:
 };
 
 int main() {
-	String s1("chua£¡");
-	String s2(s1);
+	String s1("chua ");
+	String s2="xiu xiu~ ";
 	String s3 = s2;
+	String s4 = s1 + s2;
+	String s5 = "haiya " + s1;
+	String s6 = s2 + "peng peng~";
+	s4 += "778";
+	/*cout << s4 << endl;
+	cout << s5 << endl;
+	cout << s6 << endl;
 	cout << s1.get_str() << endl;
 	cout << s2.get_str() << endl;
 	cout << s3 << endl;
-	cout << s3[1] << endl;
+	cout << s4[1] << endl;*/
+	if (s2 <= s3) {
+		cout << "yes" << endl;
+	}
+	else {
+		cout << "no" << endl;
+	}
 	system("pause");
 	return 0;
 }
