@@ -15,20 +15,35 @@ public:
 		strcpy(_str, str);
 	}
 
-	String(const String& s)
+	//这是深拷贝
+	String(const String& s)             //拷贝构造
 		:_str(NULL)
 	{
 		String tmp(s._str);
 		swap(this->_str, tmp._str);
-	}
+	}	
+	//这是浅拷贝
+/*	String(const String& s)             //拷贝构造
+		:_str(s._str)
+	{}
+*/	
 
-	String& operator=(const String& s) {    //"="运算符重载
+	//这是深拷贝
+	String& operator=(const String& s) {    //"=" 运算符重载   
 		if (this != &s) {
 			String tmp(s._str);
 			swap(this->_str, tmp._str);
 			return *this;
 		}
 	}
+	//这是浅拷贝
+/*	String& operator=(const String& s) {    //"=" 运算符重载   
+		if (this != &s) {
+			this->_str = s._str;
+			return *this;
+		}
+	}
+*/
 
 	friend String operator+(const String& s1, const String& s2) {
 		char* p = new char[strlen(s1._str) + strlen(s2._str) + 1];
