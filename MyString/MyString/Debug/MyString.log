@@ -1,3 +1,5 @@
 ﻿  main.cpp
+d:\编程\source code\daily-code\mystring\mystring\main.cpp(34): warning C4267: “初始化”: 从“size_t”转换到“char”，可能丢失数据
+d:\编程\source code\daily-code\mystring\mystring\main.cpp(43): warning C4267: “初始化”: 从“size_t”转换到“char”，可能丢失数据
   MyString.vcxproj -> D:\编程\source code\Daily-code\MyString\Debug\MyString.exe
   MyString.vcxproj -> D:\编程\source code\Daily-code\MyString\Debug\MyString.pdb (Partial PDB)
