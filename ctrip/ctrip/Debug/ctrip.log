@@ -1,0 +1,5 @@
+﻿  main.cpp
+d:\编程\source code\daily-code\ctrip\ctrip\main.cpp(9): warning C4018: “<”: 有符号/无符号不匹配
+d:\编程\source code\daily-code\ctrip\ctrip\main.cpp(10): warning C4018: “<”: 有符号/无符号不匹配
+  ctrip.vcxproj -> D:\编程\source code\Daily-code\ctrip\Debug\ctrip.exe
+  ctrip.vcxproj -> D:\编程\source code\Daily-code\ctrip\Debug\ctrip.pdb (Partial PDB)
